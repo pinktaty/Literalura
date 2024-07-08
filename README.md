@@ -2,8 +2,9 @@
 
 ## Description
 
-This project is a library management application developed in Java with Spring Framework. 
-Its purpose is to connect to the Gutendex API to fetch information about books and their authors in JSON format. This data is processed using JsonAlias annotations, stored in a PostgreSQL database via Jakarta Persistence API (allowing and using CRUD operations through Spring Data JPA), and presented to the user through a command-line interface.
+This project is a library management application developed in Java with the Spring Framework. 
+Its purpose is to connect to the Gutendex API to fetch information about books and their authors in a JSON format. This data is processed using JsonAlias annotations, stored into a PostgreSQL database via Jakarta Persistence API (allowing and using CRUD operations through Spring Data JPA), and presented to the user through a command-line interface.
+
 ## Structure
 
 ### Entry Point
