@@ -11,14 +11,14 @@ Its purpose is to connect to the Gutendex API to fetch information about books a
 ### Model
 - `./src/main/java/com/pinktaty/literalura/service/Api.java`: Class that connects with the Gutendex API and receives its response.
 - `./src/main/java/com.pinktaty.literalura/service/IConvertData.java`: Interface designed to provide a generic method for converting JSON data into Java objects.
-- `./src/main/java/com.pinktaty.literalura/service/ConvertData.java`: Class that implements the `IConvertData` interface, providing functionality to convert JSON data into Java objects using the Jackson library.
-- `./src/main/java/com/pinktaty/literalura/model/BookFound.java`: Record class used for parsing the response received from the API in JSON format using `JsonAlias`.
-- `./src/main/java/com.pinktaty.literalura/model/BookRecord.java`: Record class used for representing book data received in JSON format using `JsonAlias`.
+- `./src/main/java/com.pinktaty.literalura/service/ConvertData.java`: Class that implements the IConvertData interface, providing functionality to convert JSON data into Java objects using the Jackson library.
+- `./src/main/java/com/pinktaty/literalura/model/BookFound.java`: Record class used for parsing the response received from the API in JSON format using JsonAlias.
+- `./src/main/java/com.pinktaty.literalura/model/BookRecord.java`: Record class used for representing book data received in JSON format using JsonAlias.
 - `./src/main/java/com.pinktaty.literalura/model/Book.java`: JPA entity that allows mapping of books to a database table.
-- `./src/main/java/com.pinktaty.literalura/repository/BookRepository.java`: Spring Data JPA repository for managing `Book` entities, defining custom query methods for database interactions.
-- `./src/main/java/com.pinktaty.literalura/model/AuthorRecord.java`: Record class used for representing author data received in JSON format using `JsonAlias`.
+- `./src/main/java/com.pinktaty.literalura/repository/BookRepository.java`: Spring Data JPA repository for managing Book entities, defining custom query methods for database interactions.
+- `./src/main/java/com.pinktaty.literalura/model/AuthorRecord.java`: Record class used for representing author data received in JSON format using JsonAlias.
 - `./src/main/java/com.pinktaty.literalura/model/Author.java`: JPA entity that allows mapping of authors to a database table.
-- `./src/main/java/com.pinktaty.literalura/repository/AuthorRepository.java`: Spring Data JPA repository for managing `Author` entities, defining custom query methods for database interactions.
+- `./src/main/java/com.pinktaty.literalura/repository/AuthorRepository.java`: Spring Data JPA repository for managing Author entities, defining custom query methods for database interactions.
 - `./src/main/java/com.pinktaty.literalura/model/Library.java`: Spring service class that encapsulates the business logic of the app.
 
 ### View
@@ -50,12 +50,12 @@ Su función es conectarse a la API de Gutendex para obtener información sobre l
 ### Modelo
 - `./src/main/java/com/pinktaty/literalura/service/Api.java`: Clase que se conecta con la API de Gutendex y recibe su respuesta.
 - `./src/main/java/com/pinktaty/literalura/service/IConvertData.java`: Interfaz diseñada para proporcionar un método genérico para convertir datos JSON en objetos Java.
-- `./src/main/java/com.pinktaty.literalura/service/ConvertData.java`: Clase que implementa la interfaz `IConvertData`, proporcionando funcionalidad para convertir datos JSON en objetos Java utilizando la biblioteca Jackson.
-- `./src/main/java/com/pinktaty.literalura/model/BookFound.java`: Clase de registro utilizada para extraer la respuesta recibida por la API en formato JSON usando `JsonAlias`.
-- `./src/main/java/com.pinktaty.literalura/model/BookRecord.java`: Clase de registro utilizada para representar datos de libros recibidos en formato JSON usando `JsonAlias`.
+- `./src/main/java/com.pinktaty.literalura/service/ConvertData.java`: Clase que implementa la interfaz IConvertData, proporcionando funcionalidad para convertir datos JSON en objetos Java utilizando la biblioteca Jackson.
+- `./src/main/java/com/pinktaty.literalura/model/BookFound.java`: Clase de registro utilizada para extraer la respuesta recibida por la API en formato JSON usando JsonAlias.
+- `./src/main/java/com.pinktaty.literalura/model/BookRecord.java`: Clase de registro utilizada para representar datos de libros recibidos en formato JSON usando JsonAlias.
 - `./src/main/java/com.pinktaty.literalura/model/Book.java`: Entidad JPA que permite el mapeo de libros a una tabla de base de datos.
 - `./src/main/java/com.pinktaty.literalura/repository/BookRepository.java`: Repositorio Spring Data JPA para gestionar entidades de libros, define métodos de consulta personalizados para interacciones con la base de datos.
-- `./src/main/java/com.pinktaty.literalura/model/AuthorRecord.java`: Clase de registro utilizada para representar datos de autores recibidos en formato JSON usando `JsonAlias`.
+- `./src/main/java/com.pinktaty.literalura/model/AuthorRecord.java`: Clase de registro utilizada para representar datos de autores recibidos en formato JSON usando JsonAlias.
 - `./src/main/java/com.pinktaty.literalura/model/Author.java`: Entidad JPA que permite el mapeo de autores a una tabla de base de datos.
 - `./src/main/java/com.pinktaty.literalura/repository/AuthorRepository.java`: Repositorio Spring Data JPA para gestionar entidades de autores, define métodos de consulta personalizados para interacciones con la base de datos.
 - `./src/main/java/com.pinktaty.literalura/model/Library.java`: Clase de servicio Spring que encapsula la lógica de negocio de la aplicación.
