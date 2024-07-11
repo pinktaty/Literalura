@@ -6,12 +6,12 @@ import com.pinktaty.literalura.service.Api;
 import com.pinktaty.literalura.service.ConvertData;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
+@Component
 public class Library {
     Api api;
     ConvertData conversor;
