@@ -1,6 +1,7 @@
 package com.pinktaty.literalura.controller;
 
 import com.pinktaty.literalura.model.*;
+import com.pinktaty.literalura.service.Library;
 import com.pinktaty.literalura.view.LibraryView;
 import com.pinktaty.literalura.view.Menu;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.pinktaty.literalura.service;
+package com.pinktaty.literalura.model;
 
 import org.springframework.stereotype.Component;
 

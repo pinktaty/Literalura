@@ -1,17 +1,16 @@
-package com.pinktaty.literalura.model;
+package com.pinktaty.literalura.service;
 
+import com.pinktaty.literalura.model.*;
 import com.pinktaty.literalura.repository.AuthorRepository;
 import com.pinktaty.literalura.repository.BookRepository;
-import com.pinktaty.literalura.service.Api;
-import com.pinktaty.literalura.service.ConvertData;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+@Service
 public class Library {
     Api api;
     ConvertData conversor;
