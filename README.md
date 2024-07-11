@@ -14,7 +14,7 @@ Its purpose is to connect to the Gutendex API to fetch information about books a
 - `./src/main/java/com.pinktaty.literalura/model/Book.java`: JPA entity that allows mapping of books to a database table.
 - `./src/main/java/com.pinktaty.literalura/model/AuthorRecord.java`: Record class used for representing author data received in JSON format using JsonAlias.
 - `./src/main/java/com.pinktaty.literalura/model/Author.java`: JPA entity that allows mapping of authors to a database table.
-- `./src/main/java/com.pinktaty.literalura/model/Library.java`: Spring service class that encapsulates the business logic of the app.
+- `./src/main/java/com.pinktaty.literalura/model/Library.java`: Spring component that encapsulates the business logic of the app.
 
 #### Service
 - `./src/main/java/com/pinktaty/literalura/service/Api.java`: Class that connects with the Gutendex API and receives its response.
@@ -57,7 +57,7 @@ Su función es conectarse a la API de Gutendex para obtener información sobre l
 - `./src/main/java/com.pinktaty.literalura/model/Book.java`: Entidad JPA que permite el mapeo de libros a una tabla de base de datos.
 - `./src/main/java/com.pinktaty.literalura/model/AuthorRecord.java`: Clase de registro utilizada para representar datos de autores recibidos en formato JSON usando JsonAlias.
 - `./src/main/java/com.pinktaty.literalura/model/Author.java`: Entidad JPA que permite el mapeo de autores a una tabla de base de datos.
-- `./src/main/java/com.pinktaty.literalura/model/Library.java`: Clase de servicio Spring que encapsula la lógica de negocio de la aplicación.
+- `./src/main/java/com.pinktaty.literalura/model/Library.java`: Conponente de Spring que encapsula la lógica de negocio de la aplicación.
 
 #### Servicio
 - `./src/main/java/com/pinktaty/literalura/service/Api.java`: Clase que se conecta con la API de Gutendex y recibe su respuesta.
