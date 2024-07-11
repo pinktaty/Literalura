@@ -1,8 +1,8 @@
-package com.pinktaty.literalura.service;
+package com.pinktaty.literalura.model.service;
 
 import com.pinktaty.literalura.model.*;
-import com.pinktaty.literalura.repository.AuthorRepository;
-import com.pinktaty.literalura.repository.BookRepository;
+import com.pinktaty.literalura.model.repository.AuthorRepository;
+import com.pinktaty.literalura.model.repository.BookRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

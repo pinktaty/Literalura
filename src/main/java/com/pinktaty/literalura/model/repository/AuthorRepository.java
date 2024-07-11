@@ -1,4 +1,4 @@
-package com.pinktaty.literalura.repository;
+package com.pinktaty.literalura.model.repository;
 
 import com.pinktaty.literalura.model.Author;
 import org.springframework.data.jpa.repository.JpaRepository;
