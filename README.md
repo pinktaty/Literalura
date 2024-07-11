@@ -52,17 +52,21 @@ Su función es conectarse a la API de Gutendex para obtener información sobre l
 - `./src/main/java/com/pinktaty/literalura/LiteraluraApplication.java`: Punto de entrada del programa.
 
 ### Modelo
-- `./src/main/java/com/pinktaty/literalura/service/Api.java`: Clase que se conecta con la API de Gutendex y recibe su respuesta.
-- `./src/main/java/com/pinktaty/literalura/service/IConvertData.java`: Interfaz diseñada para proporcionar un método genérico para convertir datos JSON en objetos Java.
-- `./src/main/java/com.pinktaty.literalura/service/ConvertData.java`: Clase que implementa la interfaz IConvertData, proporcionando funcionalidad para convertir datos JSON en objetos Java utilizando la biblioteca Jackson.
 - `./src/main/java/com/pinktaty.literalura/model/BookFound.java`: Clase de registro utilizada para extraer la respuesta recibida por la API en formato JSON usando JsonAlias.
 - `./src/main/java/com.pinktaty.literalura/model/BookRecord.java`: Clase de registro utilizada para representar datos de libros recibidos en formato JSON usando JsonAlias.
 - `./src/main/java/com.pinktaty.literalura/model/Book.java`: Entidad JPA que permite el mapeo de libros a una tabla de base de datos.
-- `./src/main/java/com.pinktaty.literalura/repository/BookRepository.java`: Repositorio Spring Data JPA para gestionar entidades de libros, define métodos de consulta personalizados para interacciones con la base de datos.
 - `./src/main/java/com.pinktaty.literalura/model/AuthorRecord.java`: Clase de registro utilizada para representar datos de autores recibidos en formato JSON usando JsonAlias.
 - `./src/main/java/com.pinktaty.literalura/model/Author.java`: Entidad JPA que permite el mapeo de autores a una tabla de base de datos.
-- `./src/main/java/com.pinktaty.literalura/repository/AuthorRepository.java`: Repositorio Spring Data JPA para gestionar entidades de autores, define métodos de consulta personalizados para interacciones con la base de datos.
 - `./src/main/java/com.pinktaty.literalura/model/Library.java`: Clase de servicio Spring que encapsula la lógica de negocio de la aplicación.
+
+#### Servicio
+- `./src/main/java/com/pinktaty/literalura/service/Api.java`: Clase que se conecta con la API de Gutendex y recibe su respuesta.
+- `./src/main/java/com/pinktaty/literalura/service/IConvertData.java`: Interfaz diseñada para proporcionar un método genérico para convertir datos JSON en objetos Java.
+- `./src/main/java/com.pinktaty.literalura/service/ConvertData.java`: Clase que implementa la interfaz IConvertData, proporcionando funcionalidad para convertir datos JSON en objetos Java utilizando la biblioteca Jackson.
+
+#### Repositorio
+- `./src/main/java/com.pinktaty.literalura/repository/BookRepository.java`: Repositorio Spring Data JPA para gestionar entidades de libros, define métodos de consulta personalizados para interacciones con la base de datos.
+- - `./src/main/java/com.pinktaty.literalura/repository/AuthorRepository.java`: Repositorio Spring Data JPA para gestionar entidades de autores, define métodos de consulta personalizados para interacciones con la base de datos.
 
 ### Vista
 - `./src/main/java/com.pinktaty.literalura/view/Menu.java`: Componente Spring que proporciona la interfaz de usuario del menú para interactuar con el sistema de la biblioteca.
