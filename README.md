@@ -9,17 +9,18 @@ Its purpose is to connect to the Gutendex API to fetch information about books a
 - `./src/main/java/com/pinktaty/literalura/LiteraluraApplication.java`: Program's entry point.
 
 ### Model
+- `./src/main/java/com/pinktaty/literalura/model/Api.java`: Class that connects with the Gutendex API and receives its response.
 - `./src/main/java/com/pinktaty/literalura/model/BookFound.java`: Record class used for parsing the response received from the API in JSON format using JsonAlias.
 - `./src/main/java/com.pinktaty.literalura/model/BookRecord.java`: Record class used for representing book data received in JSON format using JsonAlias.
 - `./src/main/java/com.pinktaty.literalura/model/Book.java`: JPA entity that allows mapping of books to a database table.
 - `./src/main/java/com.pinktaty.literalura/model/AuthorRecord.java`: Record class used for representing author data received in JSON format using JsonAlias.
 - `./src/main/java/com.pinktaty.literalura/model/Author.java`: JPA entity that allows mapping of authors to a database table.
-- `./src/main/java/com.pinktaty.literalura/model/Library.java`: Spring component that encapsulates the business logic of the app.
+- `./src/main/java/com.pinktaty.literalura/model/IConvertData.java`: Interface designed to provide a generic method for converting JSON data into Java objects.
+- `./src/main/java/com.pinktaty.literalura/model/ConvertData.java`: Class that implements the IConvertData interface, providing functionality to convert JSON data into Java objects using the Jackson library.
 
 #### Service
-- `./src/main/java/com/pinktaty/literalura/service/Api.java`: Class that connects with the Gutendex API and receives its response.
-- `./src/main/java/com.pinktaty.literalura/service/IConvertData.java`: Interface designed to provide a generic method for converting JSON data into Java objects.
-- `./src/main/java/com.pinktaty.literalura/service/ConvertData.java`: Class that implements the IConvertData interface, providing functionality to convert JSON data into Java objects using the Jackson library.
+- `./src/main/java/com.pinktaty.literalura/service/Library.java`: Spring service that encapsulates the business logic of the app.
+
 
 #### Repository
 - `./src/main/java/com.pinktaty.literalura/repository/BookRepository.java`: Spring Data JPA repository for managing Book entities, defining custom query methods for database interactions.
@@ -52,25 +53,25 @@ Su función es conectarse a la API de Gutendex para obtener información sobre l
 - `./src/main/java/com/pinktaty/literalura/LiteraluraApplication.java`: Punto de entrada del programa.
 
 ### Modelo
+- `./src/main/java/com/pinktaty/literalura/model/Api.java`: Clase que se conecta con la API de Gutendex y recibe su respuesta.
 - `./src/main/java/com/pinktaty.literalura/model/BookFound.java`: Clase de registro utilizada para extraer la respuesta recibida por la API en formato JSON usando JsonAlias.
 - `./src/main/java/com.pinktaty.literalura/model/BookRecord.java`: Clase de registro utilizada para representar datos de libros recibidos en formato JSON usando JsonAlias.
 - `./src/main/java/com.pinktaty.literalura/model/Book.java`: Entidad JPA que permite el mapeo de libros a una tabla de base de datos.
 - `./src/main/java/com.pinktaty.literalura/model/AuthorRecord.java`: Clase de registro utilizada para representar datos de autores recibidos en formato JSON usando JsonAlias.
 - `./src/main/java/com.pinktaty.literalura/model/Author.java`: Entidad JPA que permite el mapeo de autores a una tabla de base de datos.
-- `./src/main/java/com.pinktaty.literalura/model/Library.java`: Conponente de Spring que encapsula la lógica de negocio de la aplicación.
+- `./src/main/java/com/pinktaty/literalura/model/IConvertData.java`: Interfaz diseñada para proporcionar un método genérico para convertir datos JSON en objetos Java.
+- `./src/main/java/com.pinktaty.literalura/model/ConvertData.java`: Clase que implementa la interfaz IConvertData, proporcionando funcionalidad para convertir datos JSON en objetos Java utilizando la biblioteca Jackson.
 
 #### Servicio
-- `./src/main/java/com/pinktaty/literalura/service/Api.java`: Clase que se conecta con la API de Gutendex y recibe su respuesta.
-- `./src/main/java/com/pinktaty/literalura/service/IConvertData.java`: Interfaz diseñada para proporcionar un método genérico para convertir datos JSON en objetos Java.
-- `./src/main/java/com.pinktaty.literalura/service/ConvertData.java`: Clase que implementa la interfaz IConvertData, proporcionando funcionalidad para convertir datos JSON en objetos Java utilizando la biblioteca Jackson.
+- `./src/main/java/com.pinktaty.literalura/service/Library.java`: Servicio de Spring que encapsula la lógica de negocio de la aplicación.
 
 #### Repositorio
 - `./src/main/java/com.pinktaty.literalura/repository/BookRepository.java`: Repositorio Spring Data JPA para gestionar entidades de libros, define métodos de consulta personalizados para interacciones con la base de datos.
 - - `./src/main/java/com.pinktaty.literalura/repository/AuthorRepository.java`: Repositorio Spring Data JPA para gestionar entidades de autores, define métodos de consulta personalizados para interacciones con la base de datos.
 
 ### Vista
-- `./src/main/java/com.pinktaty.literalura/view/Menu.java`: Componente Spring que proporciona la interfaz de usuario del menú para interactuar con el sistema de la biblioteca.
-- `./src/main/java/com.pinktaty.literalura/view/LibraryView.java`: Componente Spring que maneja la lógica de presentación para mostrar información sobre los libros y autores.
+- `./src/main/java/com.pinktaty.literalura/view/Menu.java`: Componente de Spring que proporciona la interfaz de usuario del menú para interactuar con el sistema de la biblioteca.
+- `./src/main/java/com.pinktaty.literalura/view/LibraryView.java`: Componente de Spring que maneja la lógica de presentación para mostrar información sobre los libros y autores.
 
 ### Controlador
 - `./src/main/java/com.pinktaty.literalura/controller/LibraryController.java`: Controlador Spring que coordina el flujo de interacción del usuario, la lógica de negocio y la presentación de datos para la aplicación.
