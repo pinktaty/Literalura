@@ -21,8 +21,10 @@ public class LibraryFacadeService {
     }
 
     protected Book buildBook(BookFound bookFound){
-        Book book = bookService.createBook(bookFound);
-        book.setAuthors(authorService.extractAuthor(bookFound));
+        List<BookRecord> bookData = bookFound.book();
+
+        Book book = bookService.createBook(bookData);
+        book.setAuthors(authorService.extractAuthor(bookData));
 
         bookService.saveBook(book);
 

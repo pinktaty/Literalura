@@ -33,8 +33,8 @@ public class BookService {
         return result;
     }
 
-    public Book createBook(BookFound bookFound){
-        return new Book(bookFound.book());
+    public Book createBook(List<BookRecord> bookData){
+        return new Book(bookData);
     }
 
     @Transactional

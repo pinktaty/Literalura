@@ -3,6 +3,7 @@ package com.pinktaty.literalura.model.service;
 import com.pinktaty.literalura.model.Author;
 import com.pinktaty.literalura.model.AuthorRecord;
 import com.pinktaty.literalura.model.BookFound;
+import com.pinktaty.literalura.model.BookRecord;
 import com.pinktaty.literalura.model.repository.AuthorRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +21,8 @@ public class AuthorService {
         this.repositoryAuthor = repositoryAuthor;
     }
 
-    public List<Author> extractAuthor(BookFound bookFound){
-        return createAuthor(bookFound.book().get(0).author());
+    public List<Author> extractAuthor(List<BookRecord> bookData){
+        return createAuthor(bookData.get(0).author());
     }
 
     @Transactional
