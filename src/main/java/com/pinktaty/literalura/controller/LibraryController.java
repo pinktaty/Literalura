@@ -1,7 +1,7 @@
 package com.pinktaty.literalura.controller;
 
 import com.pinktaty.literalura.model.*;
-import com.pinktaty.literalura.model.service.Library;
+import com.pinktaty.literalura.model.service.LibraryFacadeService;
 import com.pinktaty.literalura.view.LibraryView;
 import com.pinktaty.literalura.view.Menu;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,13 +13,13 @@ import java.util.List;
 public class LibraryController {
     Menu menu;
     LibraryView libraryView;
-    Library library;
+    LibraryFacadeService libraryFacadeService;
 
     @Autowired
-    public LibraryController(Menu menu, LibraryView libraryView, Library library){
+    public LibraryController(Menu menu, LibraryView libraryView, LibraryFacadeService libraryFacadeService){
         this.menu = menu;
         this.libraryView = libraryView;
-        this.library = library;
+        this.libraryFacadeService = libraryFacadeService;
     }
 
     public void generateRequest(){
@@ -52,7 +52,7 @@ public class LibraryController {
 
     private void registerBook()
     {
-        Book book = library.searchBook(menu.searchBook());
+        Book book = libraryFacadeService.searchBook(menu.searchBook());
         if(book != null) {
             libraryView.printBook(book);
         } else {
@@ -61,7 +61,7 @@ public class LibraryController {
     }
 
     private void listRegisteredBooks() {
-        List<Book> books = library.listAllBooks();
+        List<Book> books = libraryFacadeService.listAllBooks();
         if(books.size() != 0){
             libraryView.printBooks(books);
         } else {
@@ -70,7 +70,7 @@ public class LibraryController {
     }
 
     private void listRegisteredAuthors() {
-        List<String> authors = library.getAllAuthors();
+        List<String> authors = libraryFacadeService.getAllAuthors();
         if(authors.size() != 0){
             libraryView.printOnlyFeature(authors);
         } else {
@@ -79,7 +79,7 @@ public class LibraryController {
     }
 
     private void listAliveAuthors() {
-        List<String> authors = library.getAliveAuthors(menu.getYearOfAliveness());
+        List<String> authors = libraryFacadeService.getAliveAuthors(menu.getYearOfAliveness());
         if(authors.size() != 0){
             libraryView.printOnlyFeature(authors);
         } else {
@@ -89,7 +89,7 @@ public class LibraryController {
     }
 
     private void listBooksByLanguage() {
-        List<String> books = library.getSameLanguageBooks(
+        List<String> books = libraryFacadeService.getSameLanguageBooks(
                 menu.getLanguageOfInterest());
         if(books.size() != 0){
             libraryView.printOnlyFeature(books);

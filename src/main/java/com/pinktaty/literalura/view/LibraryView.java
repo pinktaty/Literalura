@@ -12,7 +12,7 @@ public class LibraryView {
     public void printBook(Book book) {
         String s = "Título: " + book.getTitle() + "\n" + "Autores: "
                 + printAuthors(book.getAuthors())
-                + "\n" + "Lenguajes: " + book.getLanguages() + "\n";
+                + "\n" + "Lenguajes: " + book.getLanguages();
         printOnly(s);
     }
 
